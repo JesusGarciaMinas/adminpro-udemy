@@ -1,37 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PagesModule } from './pages/pages.module';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+
 import { LoginComponent } from './login/login.component';
-import { NopagefoundComponent } from './404/nopagefound/nopagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graficas1Component } from './pages/graficas1/graficas1.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    NopagefoundComponent,
-    DashboardComponent,
-    ProgressComponent,
-    Graficas1Component,
-    NavbarComponent,
-    SidebarComponent,
-    BreadcrumbsComponent,
-    HeaderComponent,
-    PagesComponent,
-    RegisterComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  imports: [BrowserModule, PagesModule, AppRoutingModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
