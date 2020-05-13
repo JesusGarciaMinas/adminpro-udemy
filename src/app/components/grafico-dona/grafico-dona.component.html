@@ -1,2 +1,13 @@
-<canvas baseChart [data]="doughnutChartLabels" [labels]="doughnutChartLabels" [chartType]="doughnutChartType">
-</canvas>
+<div class="card">
+    <h4 class="card.title text-center">{{ leyenda }}</h4>
+    <div>
+        <div>
+            <div style="display: block;">
+                <div class="card-body">
+                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType">
+          </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

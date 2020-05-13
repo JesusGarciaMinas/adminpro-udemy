@@ -8,14 +8,19 @@ import { ChartType } from 'chart.js';
   styles: [],
 })
 export class GraficoDonaComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('chartLabels') doughnutChartLabels: Label[];
-  // tslint:disable-next-line: no-input-rename
-  @Input('chartData') public doughnutChartData: MultiDataSet;
-  // tslint:disable-next-line: no-input-rename
-  @Input('chartType') public doughnutChartType: ChartType;
+  @Input() dataGraficos: any = {};
+
+  public doughnutChartLabels: Label[];
+  public doughnutChartData: MultiDataSet;
+  public doughnutChartType: ChartType;
+  public leyenda: string;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.doughnutChartData = this.dataGraficos.data;
+    this.doughnutChartLabels = this.dataGraficos.labels;
+    this.doughnutChartType = this.dataGraficos.type;
+    this.leyenda = this.dataGraficos.leyenda;
+  }
 }
